@@ -1,0 +1,31 @@
+{
+  "name": "shopping-list",
+  "version": "1.0.0",
+  "description": "Shopping List application full stack web development",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hosamelshazly92/Shopping-List.git"
+  },
+  "keywords": [
+    "Shopping"
+  ],
+  "author": "Hosam Elshazly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hosamelshazly92/Shopping-List/issues"
+  },
+  "homepage": "https://github.com/hosamelshazly92/Shopping-List#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
