@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import path from "path";
 import dotenv from "dotenv";
 import itemsRoutes from "./routes/items.js";
 
@@ -34,6 +35,13 @@ mongoose.set('useFindAndModify', false);
 app.use('/items', itemsRoutes);
 
 // ==================== server & mongo setup ====================
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static('client/build'));
+    app.get('*', (req,res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
 
 app.listen(PORT, () => {
     console.log('==========> server listening success');
